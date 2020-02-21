@@ -43,6 +43,8 @@ public class Decrement implements Runnable {
             }
         } catch (InterruptedException ex) {
             logger.error(ex.getMessage(), ex.getStackTrace());
+	    // Restore interrupted state...
+            Thread.currentThread().interrupt();
         } finally {
             if (locker.isLocked()) {
                 locker.unlock();

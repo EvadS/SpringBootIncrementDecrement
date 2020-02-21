@@ -44,6 +44,8 @@ public class Increment implements Runnable {
 
         } catch (InterruptedException ex) {
             logger.error(ex.getMessage(), ex.getStackTrace());
+	    // Restore interrupted state...
+            Thread.currentThread().interrupt();
         } finally {
             // situation when we got exception from counter
             // or exception from  ThreadHelper
