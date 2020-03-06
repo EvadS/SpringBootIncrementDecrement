@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 @Component
 public class DataSourceConfigCloud {
 
-    private final Logger logger = LoggerFactory.getLogger(Counter.class);
+    private final Logger logger = LoggerFactory.getLogger(DataSourceConfigCloud.class);
 
 
     @PostConstruct
